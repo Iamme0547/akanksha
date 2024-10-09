@@ -9,32 +9,40 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #f0f8ff;
             color: #333;
+            line-height: 1.6;
         }
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #ffffff;
             padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-            border-radius: 5px;
             margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: #e8f5e9; /* Light green background */
+            border: 2px solid #4caf50; /* Green border */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        header:hover {
+            background-color: #c8e6c9; /* Slightly darker on hover */
         }
         h1 {
             margin: 0;
-            font-size: 28px;
+            font-size: 32px;
             color: #007BFF;
+            font-weight: bold;
         }
         h2 {
             margin: 5px 0;
-            font-size: 20px;
+            font-size: 22px;
             color: #555;
+            font-weight: normal;
         }
         img {
-            width: 100px; 
-            height: 100px; 
+            width: 120px; 
+            height: 120px; 
             object-fit: cover; 
             border-radius: 50%; 
             border: 3px solid #007BFF; 
@@ -42,26 +50,41 @@
         }
         section {
             padding: 20px;
-            border-radius: 5px;
+            border-radius: 10px;
             margin-bottom: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
+            background-color: #e8f5e9; /* Light green background */
+            border: 2px solid #4caf50; /* Green border */
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         section:hover {
-            transform: translateY(-2px);
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
         ul {
             list-style-type: disc;
             padding-left: 20px;
+            margin: 10px 0;
         }
         .section-header {
             border-bottom: 2px solid #007BFF; 
             padding-bottom: 8px;
             margin-bottom: 15px;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 20px;
             color: #333;
+        }
+        .experience-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            background-color: #f9f9f9; /* Light grey background */
+        }
+        .experience-title {
+            font-weight: bold;
+            font-size: 18px;
+            color: #007BFF;
         }
         .contact-info {
             font-style: italic;
@@ -73,6 +96,14 @@
             margin-top: 20px;
             font-size: 14px;
             color: #777;
+        }
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
         @media (max-width: 600px) {
             header {
@@ -105,37 +136,53 @@
 
 <section>
     <h2 class="section-header">Education</h2>
-    <p><strong>Bachelor of Dental Surgery (BDS) - 64.5%</strong> - INDERPRASTHA DENTAL COLLEGE & HOSPITAL, 2019</p>
-    <p><strong>High School and Intermediate - First Division</strong> - AVB PUBLIC SCHOOL, 2014</p>
+    <div class="two-column">
+        <div class="column">
+            <p><strong>Bachelor of Dental Surgery (BDS) - 64.5%</strong> - INDERPRASTHA DENTAL COLLEGE & HOSPITAL, 2019</p>
+        </div>
+        <div class="column">
+            <p><strong>High School and Intermediate - First Division</strong> - AVB PUBLIC SCHOOL, 2014</p>
+        </div>
+    </div>
 </section>
 
 <section>
     <h2 class="section-header">Experience</h2>
-    <p><strong>Associate Dentist</strong> - Dr. Nakra’s Dental Clinic, Delhi (Jan'24 - Present)</p>
-    <ul>
-        <li>Performed extractions, scaling, polishing, GIC, composite restorations, and crown preparations.</li>
-        <li>Performed root canal procedures.</li>
-        <li>Worked as POC for the clinic.</li>
-        <li>Diagnosis and treatment of patients.</li>
-    </ul>
-    <p><strong>Associate Dentist</strong> - Jyothi Multispecialty Clinic, Bengaluru (July'23 - July'24)</p>
-    <ul>
-        <li>Formulation/printing of aligners.</li>
-        <li>Diagnosis and treatment of patients.</li>
-    </ul>
-    <p><strong>Associate Dentist</strong> - Bhudiraja Oro-Dental Care Clinic, Delhi (June'20 - Aug'21)</p>
-    <ul>
-        <li>Performed extractions, scaling, polishing, GIC, composite restorations, and crown preparations.</li>
-    </ul>
-    <p><strong>Associate Dentist</strong> - Om Prakash Dental Clinic, Delhi (Sep'19 - March'20)</p>
-    <ul>
-        <li>Performed extractions, scaling, polishing, GIC, composite restorations, and crown preparations.</li>
-    </ul>
-    <p><strong>Associate Dentist</strong> - Indraprastha Dental College & Hospital, Delhi (July'18 - Aug'19)</p>
-    <ul>
-        <li>Conducted dental awareness camps.</li>
-        <li>Assisted seniors and professors in various surgeries.</li>
-    </ul>
+    <div class="experience-item">
+        <p class="experience-title">Associate Dentist - Dr. Nakra’s Dental Clinic, Delhi (Jan'24 - Present)</p>
+        <ul>
+            <li>Performed extractions, scaling, polishing, GIC, composite restorations, and crown preparations.</li>
+            <li>Performed root canal procedures.</li>
+            <li>Worked as POC for the clinic.</li>
+            <li>Diagnosis and treatment of patients.</li>
+        </ul>
+    </div>
+    <div class="experience-item">
+        <p class="experience-title">Associate Dentist - Jyothi Multispecialty Clinic, Bengaluru (July'23 - July'24)</p>
+        <ul>
+            <li>Formulation/printing of aligners.</li>
+            <li>Diagnosis and treatment of patients.</li>
+        </ul>
+    </div>
+    <div class="experience-item">
+        <p class="experience-title">Associate Dentist - Bhudiraja Oro-Dental Care Clinic, Delhi (June'20 - Aug'21)</p>
+        <ul>
+            <li>Performed extractions, scaling, polishing, GIC, composite restorations, and crown preparations.</li>
+        </ul>
+    </div>
+    <div class="experience-item">
+        <p class="experience-title">Associate Dentist - Om Prakash Dental Clinic, Delhi (Sep'19 - March'20)</p>
+        <ul>
+            <li>Performed extractions, scaling, polishing, GIC, composite restorations, and crown preparations.</li>
+        </ul>
+    </div>
+    <div class="experience-item">
+        <p class="experience-title">Associate Dentist - Indraprastha Dental College & Hospital, Delhi (July'18 - Aug'19)</p>
+        <ul>
+            <li>Conducted dental awareness camps.</li>
+            <li>Assisted seniors and professors in various surgeries.</li>
+        </ul>
+    </div>
 </section>
 
 <section>
@@ -159,16 +206,19 @@
     </ul>
 </section>
 
-<section>
-    <h2 class="section-header">References</h2>
-    <p><strong>Dr. Nakra</strong></p>
-    <p>Dr. Nakra’s Dental Clinic</p>
-    <p>Dental Surgeon</p>
-    <p>Contact: +91-98704 00748</p>
+<section style="margin: 0; padding: 10;">
+    <h2 class="section-header" style="margin-bottom: 5px;">Professional References</h2>
+    <div class="reference" style="margin: 0; padding: 0;">
+        <p style="margin: 0;"><strong>Dr. A.K. Nakra</strong></p>
+        <p style="margin: 0;">Principal Dental Surgeon</p>
+        <p style="margin: 0;">Dr. Nakra’s Dental Clinic</p>
+        <p style="margin: 0;">Contact: <a href="tel:+919870400748">+91-9870400748</a></p>
+    </div>
 </section>
 
+
 <footer>
-    &copy; 2024 Dr. Akanksha Bisht. All rights reserved.
+    &copy; 2024 Dr. Akanksha Bisht. All rights reserved. | <a href="mailto:akanksha.shail2792@gmail.com">Contact Me</a>
 </footer>
 
 </body>
