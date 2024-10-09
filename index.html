@@ -15,45 +15,48 @@
         }
         header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 10px;
-            background-color: #e8f5e9; /* Light green background */
-            border: 2px solid #4caf50; /* Green border */
+            background-color: #e8f5e9;
+            border: 2px solid #4caf50;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s;
         }
         header:hover {
-            background-color: #c8e6c9; /* Slightly darker on hover */
+            background-color: #c8e6c9;
         }
         h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 28px;
             color: #007BFF;
             font-weight: bold;
+            text-align: center;
         }
         h2 {
             margin: 5px 0;
-            font-size: 22px;
+            font-size: 20px;
             color: #555;
             font-weight: normal;
+            text-align: center;
         }
         img {
-            width: 120px; 
-            height: 120px; 
-            object-fit: cover; 
-            border-radius: 50%; 
-            border: 3px solid #007BFF; 
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #007BFF;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
         }
         section {
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
-            background-color: #e8f5e9; /* Light green background */
-            border: 2px solid #4caf50; /* Green border */
+            background-color: #e8f5e9;
+            border: 2px solid #4caf50;
             box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s, box-shadow 0.2s;
         }
@@ -67,7 +70,7 @@
             margin: 10px 0;
         }
         .section-header {
-            border-bottom: 2px solid #007BFF; 
+            border-bottom: 2px solid #007BFF;
             padding-bottom: 8px;
             margin-bottom: 15px;
             font-weight: bold;
@@ -79,7 +82,7 @@
             padding: 10px;
             border: 1px solid #007BFF;
             border-radius: 5px;
-            background-color: #f9f9f9; /* Light grey background */
+            background-color: #f9f9f9;
         }
         .experience-title {
             font-weight: bold;
@@ -90,6 +93,7 @@
             font-style: italic;
             color: #666;
             margin-top: 10px;
+            text-align: center;
         }
         footer {
             text-align: center;
@@ -105,13 +109,20 @@
         footer a:hover {
             text-decoration: underline;
         }
-        @media (max-width: 600px) {
+        @media (min-width: 600px) {
             header {
-                flex-direction: column;
-                align-items: flex-start;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
             }
             img {
-                margin-top: 10px;
+                margin-top: 0;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            h2 {
+                font-size: 22px;
             }
         }
     </style>
@@ -215,7 +226,6 @@
         <p style="margin: 0;">Contact: <a href="tel:+919870400748">+91-9870400748</a></p>
     </div>
 </section>
-
 
 <footer>
     &copy; 2024 Dr. Akanksha Bisht. All rights reserved. | <a href="mailto:akanksha.shail2792@gmail.com">Contact Me</a>
